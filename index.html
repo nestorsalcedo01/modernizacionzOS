@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: Acelerando la Modernización del Mainframe con ADDI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <!-- NEITHER Mermaid JS NOR SVG were used in this output. -->
+    <!-- Color Palette: Brilliant Blues -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f8ff;
+            color: #000428;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 1rem;
+        }
+        .kpi-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .kpi-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 78, 146, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .kpi-number {
+            font-size: 4rem;
+            font-weight: 900;
+            line-height: 1;
+            color: #004e92;
+        }
+        .kpi-label {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #000428;
+            margin-top: 0.5rem;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #000428;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .section-subtitle {
+            font-size: 1.25rem;
+            text-align: center;
+            max-width: 48rem;
+            margin: 0 auto 3rem auto;
+            color: #004e92;
+        }
+        .flowchart-step {
+            background-color: white;
+            border: 2px solid #addfff;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            flex-grow: 1;
+            margin: 0 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+        }
+        .flowchart-arrow {
+            color: #004e92;
+            font-size: 2rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 0.5rem;
+        }
+        .role-card {
+             background: white;
+             border-radius: 0.75rem;
+             box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+             padding: 1.5rem;
+             display: flex;
+             flex-direction: column;
+             height: 100%;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="container mx-auto px-4 py-12">
+        
+        <header class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#004e92] to-[#4aafff]">Desbloqueando el Valor del Mainframe</h1>
+            <p class="mt-4 text-xl md:text-2xl text-[#000428] max-w-3xl mx-auto">Cómo IBM ADDI Impulsa la Modernización, la Productividad y un ROI Excepcional</p>
+        </header>
+
+        <section id="challenge" class="mb-20">
+            <h2 class="section-title">La Paradoja de la Modernización</h2>
+            <p class="section-subtitle">Las aplicaciones mainframe son vitales, pero la pérdida de conocimiento experto y la complejidad del código obstaculizan la innovación. ADDI convierte este desafío en una oportunidad estratégica.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="kpi-card bg-gradient-to-br from-[#004e92] to-[#000428]">
+                    <div class="kpi-number text-white">71%</div>
+                    <div class="kpi-label text-gray-200">De los ejecutivos consideran las aplicaciones mainframe como centrales para su estrategia de negocio.</div>
+                </div>
+                <div class="text-lg p-6">
+                    <h3 class="font-bold text-2xl mb-4 text-[#004e92]">Del Conocimiento Tribal al Activo Digital</h3>
+                    <p class="mb-2">Durante décadas, la comprensión de los sistemas críticos ha dependido de un pequeño grupo de expertos. Este "conocimiento tribal" es arriesgado y crea un cuello de botella.</p>
+                    <p>IBM ADDI rompe este ciclo. Analiza y visualiza su cartera de aplicaciones completa, transformando el conocimiento tácito en un activo empresarial accesible, persistente y democrático para todo el equipo.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="roi" class="mb-20">
+            <h2 class="section-title">Un Impacto Empresarial Cuantificable</h2>
+            <p class="section-subtitle">Más allá de la teoría, ADDI ofrece resultados financieros y operativos medibles, validados por estudios de la industria. La inversión se traduce directamente en eficiencia, ahorro y agilidad.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="kpi-card">
+                    <div class="kpi-number">163%</div>
+                    <div class="kpi-label">Retorno de la Inversión (ROI) en 3 años</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-number">&lt;1</div>
+                    <div class="kpi-label">Año para el Período de Recuperación de la Inversión</div>
+                </div>
+                 <div class="kpi-card">
+                    <div class="kpi-number">10%</div>
+                    <div class="kpi-label">Ahorro Anual en Infraestructura al Retirar Código Muerto</div>
+                </div>
+            </div>
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                 <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="font-bold text-2xl mb-2 text-center text-[#000428]">Distribución del Aumento de Productividad</h3>
+                     <p class="text-center text-sm mb-4 text-gray-600">ADDI acelera drásticamente el ciclo de vida del desarrollo, permitiendo a los equipos entregar valor más rápido.</p>
+                    <div class="chart-container h-80 md:h-96 max-w-md">
+                        <canvas id="roiDonutChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="font-bold text-2xl mb-2 text-center text-[#000428]">Redefiniendo el Esfuerzo del Desarrollador</h3>
+                    <p class="text-center text-sm mb-4 text-gray-600">ADDI invierte la proporción de tiempo, permitiendo a los desarrolladores centrarse en crear valor en lugar de solo investigar código.</p>
+                    <div class="chart-container h-80 md:h-96 max-w-lg">
+                        <canvas id="productivityBarChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="roles" class="mb-20">
+            <h2 class="section-title">Empoderando a Cada Rol Clave</h2>
+            <p class="section-subtitle">ADDI no es una herramienta para un solo perfil. Proporciona valor específico y transformador a todos los miembros del equipo de desarrollo, rompiendo silos y fomentando la colaboración.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="role-card">
+                    <div class="text-3xl mb-4">👤</div>
+                    <h3 class="font-bold text-xl mb-2 text-[#004e92]">Jefe de Proyecto</h3>
+                    <p class="text-gray-600 flex-grow">Gana previsibilidad con estimaciones basadas en datos de complejidad y análisis de impacto, gestionando proactivamente los riesgos y el alcance del proyecto.</p>
+                </div>
+
+                <div class="role-card">
+                    <div class="text-3xl mb-4">🔎</div>
+                    <h3 class="font-bold text-xl mb-2 text-[#004e92]">Analista de Sistemas</h3>
+                    <p class="text-gray-600 flex-grow">Obtiene una visión autorizada de los procesos de negocio y el linaje de datos. Traduce los requisitos en especificaciones técnicas con una claridad sin precedentes.</p>
+                </div>
+                
+                <div class="role-card">
+                    <div class="text-3xl mb-4">💻</div>
+                    <h3 class="font-bold text-xl mb-2 text-[#004e92]">Desarrollador</h3>
+                    <p class="text-gray-600 flex-grow">Acelera la comprensión del código y realiza cambios seguros. Reduce el tiempo de análisis hasta en un 50% y elimina los errores por dependencias ocultas.</p>
+                </div>
+
+                <div class="role-card">
+                    <div class="text-3xl mb-4">🚀</div>
+                    <h3 class="font-bold text-xl mb-2 text-[#004e92]">Equipo de DevOps</h3>
+                    <p class="text-gray-600 flex-grow">Integra el mainframe en pipelines de CI/CD modernos. Automatiza los "quality gates" y habilita prácticas "Shift-Left" para una entrega continua y de alta calidad.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="devops" class="mb-16">
+            <h2 class="section-title">La Transformación Estratégica de DevOps</h2>
+            <p class="section-subtitle">ADDI es el catalizador que permite aplicar los principios de DevOps más avanzados al mainframe, convirtiendo el pipeline de CI/CD en un sistema de entrega de valor inteligente y proactivo.</p>
+            
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h3 class="font-bold text-2xl mb-6 text-center text-[#000428]">Flujo de un Pipeline de CI/CD Inteligente con ADDI</h3>
+                <div class="flex flex-col md:flex-row items-center justify-center">
+                    
+                    <div class="flowchart-step">
+                        <div class="font-bold">1. Commit</div>
+                        <div>Desarrollador envía cambio a Git</div>
+                    </div>
+
+                    <div class="flowchart-arrow">→</div>
+
+                    <div class="flowchart-step bg-blue-100 border-blue-400">
+                        <div class="font-bold text-[#004e92]">2. Escaneo ADDI</div>
+                        <div>Pipeline invoca CLI para analizar el impacto y la complejidad</div>
+                    </div>
+
+                    <div class="flowchart-arrow">→</div>
+
+                    <div class="flowchart-step bg-blue-100 border-blue-400">
+                        <div class="font-bold text-[#004e92]">3. Quality Gate</div>
+                        <div>¿El cambio supera los umbrales de calidad definidos? (Ej. Complejidad > 20)</div>
+                    </div>
+
+                    <div class="flowchart-arrow">→</div>
+                    
+                    <div class="flowchart-step">
+                        <div class="font-bold">4. Feedback</div>
+                        <div>Éxito: continúa al despliegue. Fracaso: notificación inmediata al desarrollador.</div>
+                    </div>
+                </div>
+                 <p class="text-center mt-6 text-gray-700">Este ciclo de retroalimentación rápida es la esencia de "Shift-Left". ADDI permite prevenir defectos arquitectónicos en lugar de simplemente detectarlos en fases tardías, ahorrando tiempo y reduciendo drásticamente los costos de corrección.</p>
+            </div>
+        </section>
+
+        <footer class="text-center mt-20 pt-8 border-t border-[#addfff]">
+            <p class="text-lg font-semibold text-[#004e92]">IBM Application Discovery and Delivery Intelligence (ADDI)</p>
+            <p class="text-gray-600">Transformando el Mainframe para la Era Digital.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+
+        const wrapLabel = (label, maxWidth = 16) => {
+            if (label.length <= maxWidth) {
+                return label;
+            }
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + ' ' + word).trim().length > maxWidth) {
+                    lines.push(currentLine.trim());
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            });
+            if (currentLine) {
+                lines.push(currentLine.trim());
+            }
+            return lines;
+        };
+        
+        function createRoiDonutChart() {
+            const ctx = document.getElementById('roiDonutChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Aumento de Productividad de Desarrolladores (20-30%)', 'Aceleración de Transformación (10-20%)', 'Reducción de Tiempo de Análisis (35-50%)'],
+                    datasets: [{
+                        label: 'Impacto en Productividad',
+                        data: [30, 20, 50],
+                        backgroundColor: [
+                            '#004e92',
+                            '#4aafff',
+                            '#addfff'
+                        ],
+                        borderColor: '#f0f8ff',
+                        borderWidth: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: '#000428',
+                                font: {
+                                    size: 14
+                                }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                title: tooltipTitleCallback
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        function createProductivityBarChart() {
+            const ctx = document.getElementById('productivityBarChart').getContext('2d');
+            const originalLabels = ['Tiempo de Análisis e Investigación', 'Tiempo de Desarrollo y Pruebas'];
+            const wrappedLabels = originalLabels.map(label => wrapLabel(label));
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: wrappedLabels,
+                    datasets: [
+                        {
+                            label: 'Antes de ADDI',
+                            data: [80, 20],
+                            backgroundColor: '#addfff',
+                            borderColor: '#addfff',
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'Con ADDI',
+                            data: [30, 70],
+                            backgroundColor: '#004e92',
+                            borderColor: '#004e92',
+                            borderWidth: 1
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    scales: {
+                        x: {
+                            stacked: true,
+                            ticks: {
+                                color: '#000428',
+                                callback: function(value) {
+                                    return value + '%'
+                                }
+                            },
+                             grid: {
+                                display: false
+                            }
+                        },
+                        y: {
+                            stacked: true,
+                            ticks: {
+                                color: '#000428',
+                                font: {
+                                    size: 14
+                                }
+                            },
+                             grid: {
+                                color: '#e0e0e0'
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                             labels: {
+                                color: '#000428'
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                title: tooltipTitleCallback,
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed.x !== null) {
+                                        label += context.parsed.x + '%';
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            createRoiDonutChart();
+            createProductivityBarChart();
+        });
+    </script>
+</body>
+</html>
